@@ -4,19 +4,24 @@
 {% block conteudo %}
 <br>
 <form method="POST">
+    {% csrf_token %}
     <div class='form-group'>
+        {{ form_home.nome.erros }}
         <label>Nome: </label>
         {{ form_home.name|addClass:'form-control' }}
     </div>
     <div class='form-group'>
+        {{ form_home.about.erros }}
         <label>Sobre: </label>
         {{ form_home.about|addClass:'form-control' }}
     </div>
     <div class='form-group'>
+        {{ form_home.date.erros }}
         <label>Data: </label>
         {{ form_home.date|addClass:'form-control' }}
     </div>
     <div class='form-group'>
+        {{ form_home.priority.erros }}
         <label>Prioridade: </label>
         {{ form_home.priority|addClass:'form-control' }}
     </div>

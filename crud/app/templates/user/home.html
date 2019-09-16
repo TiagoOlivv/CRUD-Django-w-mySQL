@@ -2,5 +2,18 @@
 
 {% block conteudo %}
 <h1>Home</h1>
-<h2>{{ var }}</h2>
+{% for task in tasks %}
+<div class="card mb-3">
+    <div class="card-header">  
+        {{ task.name }}
+    </div>
+    <div class="card-body">  
+        <h5 class="card-title">{{ task.about }}</h5>
+        <p></p>
+        <h8 class="card-title">{{ task.get_priority_display }}</h8>
+        <p class="card-text">{{ task.date }}</p>
+    </div>
+</div>
+{% endfor %}
+<a href="{% url 'createTask' %}"><input type="button" class="btn btn-primary mb-3" value="Cadastrar"></a>
 {% endblock conteudo %}

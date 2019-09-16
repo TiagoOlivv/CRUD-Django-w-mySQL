@@ -2,9 +2,9 @@ from django.db import models
 
 class tasks(models.Model):
     PRIORITY_CHOICES = [
-        ('H','high'),
-        ('M','mid'),
-        ('L','low')
+        ('H','Alta'),
+        ('M','Média'),
+        ('L','Alta')
     ]
 
     name = models.CharField(max_length=30, null=False, blank=False)

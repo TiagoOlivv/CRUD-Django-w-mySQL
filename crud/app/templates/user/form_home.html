@@ -1,7 +1,7 @@
 {% extends 'base.html' %} 
 {% load filters %}
 
-{% block conteudo %}
+{% block content %}
 <br>
 <form method="POST">
     {% csrf_token %}
@@ -29,4 +29,4 @@
         <input type="submit" value="Salvar">
     </div>
 </form>
-{% endblock conteudo %}
+{% endblock content %}

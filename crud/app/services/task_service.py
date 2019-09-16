@@ -5,3 +5,16 @@ def createTask(task):
 
 def listTask():
     return tasks.objects.all()
+
+def listTaskID(id):
+    return tasks.objects.get(id=id)
+
+def updateTask(taskDB, newTask):
+    taskDB.name = newTask.name
+    taskDB.about = newTask.about
+    taskDB.date = newTask.date
+    taskDB.priority = newTask.priority
+    taskDB.save(force_update=True)
+
+def removeTask(taskDB):
+    taskDB.delete()

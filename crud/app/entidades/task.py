@@ -1,9 +1,10 @@
 class task():
-    def __init__(self, name, about, date, priority):
+    def __init__(self, name, about, date, priority, user):
         self.__name = name
         self.__about = about
         self.__date = date
         self.__priority = priority
+        self.__user = user
 
     @property
     def name(self):
@@ -36,3 +37,11 @@ class task():
     @priority.setter
     def priority(self, priority):
         self.__priority = priority
+    
+    @property
+    def user(self):
+        return self.__user
+
+    @priority.setter
+    def user(self, user):
+        self.__user = user

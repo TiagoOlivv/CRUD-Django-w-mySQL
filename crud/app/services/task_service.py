@@ -1,7 +1,7 @@
 from ..models import tasks
 
 def createTask(task):
-    tasks.objects.create(name=task.name, about=task.about, date=task.date, priority=task.priority)
+    tasks.objects.create(name=task.name, about=task.about, date=task.date, priority=task.priority, user=task.user)
 
 def listTask():
     return tasks.objects.all()

@@ -3,8 +3,8 @@ from ..models import tasks
 def createTask(task):
     tasks.objects.create(name=task.name, about=task.about, date=task.date, priority=task.priority, user=task.user)
 
-def listTask():
-    return tasks.objects.all()
+def listTask(user):
+    return tasks.objects.filter(user=user).all()
 
 def listTaskID(id):
     return tasks.objects.get(id=id)

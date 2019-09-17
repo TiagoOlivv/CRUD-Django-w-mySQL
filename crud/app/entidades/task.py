@@ -42,6 +42,6 @@ class task():
     def user(self):
         return self.__user
 
-    @priority.setter
+    @user.setter
     def user(self, user):
         self.__user = user

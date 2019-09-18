@@ -5,6 +5,7 @@ from .views.viewsUser import *
 urlpatterns = [
     path('home/', home, name='home'),
     path('create/', createTask, name='createTask'),
+    path('list/', listTask, name='listTask'),
     path('update/<int:id>', updateTask, name='updateTask'),
     path('remove/<int:id>', removeTask, name='removeTask'),
     path('createUser/', createUser, name='createUser'),
